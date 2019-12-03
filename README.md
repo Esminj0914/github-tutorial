@@ -21,7 +21,7 @@ _by Esmin Jusic_
 ## Repository Setup
 A repository is a folder that is connected to github. In order to make a file into a repository you want to make sure that you are in the file and then do `git init` to turn it into a repository. You will know that you did it correctly if you see `(master)` after the folder name. 
 
-Example : `~/fruits/apples/ (master) $`
+**Example :** `~/fruits/apples/ (master) $`
 
 When you initalize a folder into a repository you also want to create a repository with the same name on github. When you log in on github.com you should see repositories on the left side and you can press the green button to create a new repository. Make sure to have your repo named exactly as it is named in your ide. 
 
@@ -41,21 +41,25 @@ Now that you finished your inital setup and your repository setup you are now re
 
 ---
 ## Rolling Back Changes
+While you work in your ide you can make some mistakes that you might want to undo. Here are ways to undo some errors
 
+`git reset HEAD (file)`- When you accidently use `git add` to a file that you dont want to commit. 
 
+`git checkout (file)`- When you want to undo changes to a file. 
 
----
-## Markdown Syntax 
+`git rest HEAD~`-When you want to undo a commit.
+
+In order to undo a push you have to choose one of your previous commits that you will like to go back to. First do `git log`, find which commit you want to go back to and copy the sha key. then do `git revert (sha key)` and it will take you back to that commit and undo the push.
 
 
 
 ---
 ## Error Handling 
+If you accidently do git init in the wrong repository you can do `rm -rf .git`. 
 
-
-
----
-## Colaboration 
+If you want to remove a repository you can do it two ways. 
+1) On github.com you can go to the repository settings and delete the repo.  
+2) In your ide you can uninitialize the repo and delete the folder by using rm -rf. 
 
 
 
